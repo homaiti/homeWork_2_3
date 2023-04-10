@@ -3,4 +3,11 @@ public class Truck extends Transport{
         super(modelName, wheelsCount);
     }
 
+    @Override
+    public void service() {
+        updateTyre();
+        checkEngine();
+        checkTrailer();
+    }
 }
+

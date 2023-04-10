@@ -4,7 +4,8 @@ public class Car extends Transport{
         super(modelName, wheelsCount);
     }
     @Override
-    public void checkTrailer() {
-        return;
+    public void service() {
+        updateTyre();
+        checkEngine();
     }
 }

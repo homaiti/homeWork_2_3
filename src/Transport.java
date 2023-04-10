@@ -15,7 +15,7 @@ public abstract class Transport implements WheelsTransport{
     public int getWheelsCount() {
         return wheelsCount;
     }
-    @Override
+
     public void updateTyre() {
         System.out.println("Меняем покрышку");
     }
@@ -23,9 +23,19 @@ public abstract class Transport implements WheelsTransport{
     public void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
-    @Override
+
     public void checkTrailer() {
         System.out.println("Проверяем прицеп");
+    }
+
+    public void check(Transport transport) {
+        if (transport != null) {
+            System.out.println("Обслуживаем " + transport.getModelName());
+            for (int i = 0; i < transport.getWheelsCount(); i++) {
+                transport.updateTyre();
+            }
+            transport.service();
+        }
     }
 
 }

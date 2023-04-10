@@ -3,11 +3,7 @@ public class Bicycle extends Transport{
         super(modelName, wheelsCount);
     }
     @Override
-    public void checkTrailer() {
-        return;
-    }
-    @Override
-    public void checkEngine() {
-        return;
+    public void service() {
+           updateTyre();
     }
 }
